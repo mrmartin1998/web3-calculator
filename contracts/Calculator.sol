@@ -12,4 +12,13 @@ contract Calculator {
     result = a - b;
  }
 
+ modifier nonZero(uint256 number) {
+ require(number != 0, "Number cannot be zero");
+ _;
+ }
+
+ function divide(uint256 a, uint256 b) public nonZero(b) {
+    result = a / b;
+ }
+
 }

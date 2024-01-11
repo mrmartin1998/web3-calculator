@@ -21,5 +21,22 @@ contract('Calculator', (accounts) => {
         assert.equal(result.toNumber(), 5, "The result of 10 - 5 should be 5");
     });
 
+    // Test case for the divide function
+    it('should return 2 for divide(10, 5)', async () => {
+        await calculator.divide(10, 5);
+        const result = await calculator.result();
+        assert.equal(result.toNumber(), 2, "The result of 10 / 5 should be 2");
+    });
+
+    // Test case for division by zero
+    it('should fail for divide(10, 0)', async () => {
+        try {
+            await calculator.divide(10, 0);
+            assert.fail("The transaction should have thrown an error");
+        } catch (err) {
+            assert.include(err.message, "Number cannot be zero", "The error message should contain 'Number cannot be zero'");
+        }
+    });
+
     // Add more test cases as needed
 });
