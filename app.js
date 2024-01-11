@@ -172,9 +172,12 @@ async function calculate() {
                 return;
         }
 
+        console.log("Sending transaction...", { a, b, operation });
         const result = await transaction.send({ from: accounts[0] });
+        console.log("Transaction result:", result);
 
         const updatedResult = await contractInstance.methods.result().call();
+        console.log("Updated result from contract:", updatedResult);
         display.value = updatedResult;
     } catch (error) {
         console.error("Error in executing contract method:", error);
