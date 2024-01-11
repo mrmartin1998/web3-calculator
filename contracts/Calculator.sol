@@ -8,4 +8,8 @@ contract Calculator {
     result = a + b;
  }
 
+ function subtract(uint256 a, uint256 b) public {
+    result = a - b;
+ }
+
 }

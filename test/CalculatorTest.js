@@ -14,5 +14,12 @@ contract('Calculator', (accounts) => {
         assert.equal(result.toNumber(), 15, "The result of 10 + 5 should be 15");
     });
 
-    // You can add more test cases here for other functionalities
+    // Test case for the subtract function
+    it('should return 5 for subtract(10, 5)', async () => {
+        await calculator.subtract(10, 5);
+        const result = await calculator.result();
+        assert.equal(result.toNumber(), 5, "The result of 10 - 5 should be 5");
+    });
+
+    // Add more test cases as needed
 });
