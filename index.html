@@ -1,29 +1,48 @@
-<table>
-    <tr>
-        <td colspan="4"><input type="text" id="display" disabled></td>
-    </tr>
-    <tr>
-        <td><button onclick="addToDisplay('7')">7</button></td>
-        <td><button onclick="addToDisplay('8')">8</button></td>
-        <td><button onclick="addToDisplay('9')">9</button></td>
-        <td><button onclick="setOperation('+')">+</button></td>
-    </tr>
-    <tr>
-        <td><button onclick="addToDisplay('4')">4</button></td>
-        <td><button onclick="addToDisplay('5')">5</button></td>
-        <td><button onclick="addToDisplay('6')">6</button></td>
-        <td><button onclick="setOperation('-')">-</button></td>
-    </tr>
-    <tr>
-        <td><button onclick="addToDisplay('1')">1</button></td>
-        <td><button onclick="addToDisplay('2')">2</button></td>
-        <td><button onclick="addToDisplay('3')">3</button></td>
-        <td><button onclick="setOperation('*')">*</button></td>
-    </tr>
-    <tr>
-        <td><button onclick="addToDisplay('0')">0</button></td>
-        <td><button onclick="clearDisplay()">C</button></td>
-        <td><button onclick="calculate()">=</button></td>
-        <td><button onclick="setOperation('/')">/</button></td>
-    </tr>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Calculator</title>
+    <!-- Add any additional CSS or meta tags as needed -->
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" id="display" disabled></td>
+        </tr>
+        <tr>
+            <td><button onclick="addToDisplay('7')">7</button></td>
+            <td><button onclick="addToDisplay('8')">8</button></td>
+            <td><button onclick="addToDisplay('9')">9</button></td>
+            <td><button onclick="setOperation('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addToDisplay('4')">4</button></td>
+            <td><button onclick="addToDisplay('5')">5</button></td>
+            <td><button onclick="addToDisplay('6')">6</button></td>
+            <td><button onclick="setOperation('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addToDisplay('1')">1</button></td>
+            <td><button onclick="addToDisplay('2')">2</button></td>
+            <td><button onclick="addToDisplay('3')">3</button></td>
+            <td><button onclick="setOperation('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addToDisplay('0')">0</button></td>
+            <td><button onclick="clearDisplay()">C</button></td>
+            <td><button onclick="calculate()">=</button></td>
+            <td><button onclick="setOperation('/')">/</button></td>
+        </tr>
+    </table>
+
+    <!-- Include the Web3.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@^1.6.0/dist/web3.min.js"></script>
+
+    <!-- Include your app.js script -->
+    <script src="app.js"></script>
+
+</body>
+</html>
