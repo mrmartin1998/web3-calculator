@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
-const CONTRACT= artifacts.require("CONTRACT");
+const Calculator= artifacts.require("Calculator");
 
 module.exports = function (deployer) {
-  deployer.deploy(CONTRACT);
+  deployer.deploy(Calculator);
 };
