@@ -38,5 +38,12 @@ contract('Calculator', (accounts) => {
         }
     });
 
+    // Test case for the multiply function
+    it('should return 50 for multiply(10, 5)', async () => {
+        await calculator.multiply(10, 5);
+        const result = await calculator.result();
+        assert.equal(result.toNumber(), 50, "The result of 10 * 5 should be 50");
+    });
+
     // Add more test cases as needed
 });
